@@ -1,6 +1,6 @@
 repeat wait() until game:IsLoaded() == true
 if shared.VapeExecuted then
-	error("Vape Already Injected")
+	error("Vape Already Executed!")
 	return
 else
 	shared.VapeExecuted = true
@@ -49,7 +49,7 @@ if isfolder("vape/assets") == false then
 	makefolder("vape/assets")
 end
 
-local GuiLibrary = loadstring(GetURL("NewGuiLibrary.lua"))()
+local GuiLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewGuiLibrary.lua"))
 shared.GuiLibrary = GuiLibrary
 local workspace = game:GetService("Workspace")
 local cam = workspace.CurrentCamera
